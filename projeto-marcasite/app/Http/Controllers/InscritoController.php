@@ -8,7 +8,7 @@ class InscritoController extends Controller
 {
     //Listar os incritos
     public function index(){
-        dd("Listar");
+        return view("inscritos.index");
     }
     //carregar o formulario cadastrar usuario
 
