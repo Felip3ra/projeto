@@ -6,6 +6,7 @@
     <title>Document</title>
 </head>
 <body>
+    <a href="{{route('inscrito.index')}}">Listar</a>
     <h1>Cadastrar os usuarios</h1>
 </body>
 </html>

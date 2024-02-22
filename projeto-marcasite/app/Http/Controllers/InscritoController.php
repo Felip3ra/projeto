@@ -14,6 +14,10 @@ class InscritoController extends Controller
     public function create(){
         return view("inscritos.create");
     }
+
+    public function show(){
+        return view("inscritos.show");
+    }
     //cadastrar no banco de dados o novo usuario
     public function store(){
         dd("Cadastra");
