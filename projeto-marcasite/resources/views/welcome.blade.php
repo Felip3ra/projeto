@@ -9,5 +9,7 @@
     </head>
     <body>
         <h1>Bem vindo</h1>
+
+        <a href="{{route('inscrito.index')}}">Listar os inscritos</a>
     </body>
 </html>
