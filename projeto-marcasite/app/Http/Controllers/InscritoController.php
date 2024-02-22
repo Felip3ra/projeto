@@ -16,7 +16,7 @@ class InscritoController extends Controller
     }
     //cadastrar no banco de dados o novo usuario
     public function store(){
-        return view("inscritos.store");
+        dd("Cadastra");
     }
     //carregar o formulario editar conta
     public function edit(){
@@ -24,10 +24,10 @@ class InscritoController extends Controller
     }
     //editar no banco de dados a conta
     public function update(){
-        return view("inscritos.update");
+        dd("Editar");
     }
     //excluir a conta do banco de dados
     public function destroy(){
-        return view("inscritos.destroy");
+        dd("Apagar");
     }
 }

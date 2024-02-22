@@ -6,7 +6,6 @@
     <title>Document</title>
 </head>
 <body>
-    <a href="{{route('inscrito.create')}}">Cadastrar</a>
-    <h1>Listar os inscritos</h1>
+    <h1>Cadastrar os usuarios</h1>
 </body>
 </html>
