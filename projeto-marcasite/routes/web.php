@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\InscritoController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,4 +19,4 @@ Route::get('/', function () {
 });
 
 //Rotas a serem implementadas
-Route::get('/Listar-inscritos');
+Route::get('/Listar-inscritos',[InscritoController::class,'index'])->name('inscrito.index');
