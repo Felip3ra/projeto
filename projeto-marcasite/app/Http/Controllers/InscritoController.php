@@ -11,10 +11,23 @@ class InscritoController extends Controller
         return view("inscritos.index");
     }
     //carregar o formulario cadastrar usuario
-
+    public function create(){
+        return view("inscritos.create");
+    }
     //cadastrar no banco de dados o novo usuario
-
+    public function store(){
+        return view("inscritos.store");
+    }
     //carregar o formulario editar conta
-
+    public function edit(){
+        return view("inscritos.edit");
+    }
+    //editar no banco de dados a conta
+    public function update(){
+        return view("inscritos.update");
+    }
     //excluir a conta do banco de dados
+    public function destroy(){
+        return view("inscritos.destroy");
+    }
 }
