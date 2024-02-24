@@ -22,8 +22,9 @@ class InscritoController extends Controller
     //cadastrar no banco de dados o novo usuario
     public function store(Request $request){
         //cadastrar no banco de dados os valores dos campos
-        //$inscrito = Inscrito::create($request->all());
-        dd($request->nome);
+        $inscrito = Inscrito::create($request->all());
+        
+        return redirect()->route("inscrito.show")->with("success","Conta cadastrada com sucesso");
     }
     //carregar o formulario editar conta
     public function edit(){

@@ -17,6 +17,7 @@ class Inscrito extends Model
         'nm_nome',
         'nm_email',
         'cd_cpf',
+        'nm_endereco',
         'nm_empresa',
         'tl_telefone',
         'tl_celular',

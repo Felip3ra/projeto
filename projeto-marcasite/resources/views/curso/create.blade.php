@@ -8,7 +8,8 @@
 <body>
     <h1>Novo curso</h1>
 
-    <form action="{{route('curso.store')}}" method="post">
+    <form action="{{route('curso.store')}}" method="POST">
+        @csrf
         <label for="nome">Nome</label>
         <input type="text" name="nome" id="nome"><br><br>
 
