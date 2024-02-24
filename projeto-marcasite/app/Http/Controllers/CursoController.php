@@ -19,8 +19,8 @@ class CursoController extends Controller
         return view("curso.show");
     }
     //cadastrar no banco de dados o novo usuario
-    public function store(){
-        dd("Cadastra");
+    public function store(Request $request){
+        dd($request->nome);
     }
     //carregar o formulario editar conta
     public function edit(){

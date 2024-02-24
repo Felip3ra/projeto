@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Inscrito;
 use Illuminate\Http\Request;
 
 class InscritoController extends Controller
@@ -19,8 +20,10 @@ class InscritoController extends Controller
         return view("inscritos.show");
     }
     //cadastrar no banco de dados o novo usuario
-    public function store(){
-        dd("Cadastra");
+    public function store(Request $request){
+        //cadastrar no banco de dados os valores dos campos
+        //$inscrito = Inscrito::create($request->all());
+        dd($request->nome);
     }
     //carregar o formulario editar conta
     public function edit(){

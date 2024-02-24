@@ -21,6 +21,7 @@ return new class extends Migration
             $table->dateTime('dt_data_de_inicio');
             $table->dateTime('dt_data_de_termino');
             $table->integer('qt_maximo_de_inscritos');
+            $table->timestamps();
         });
     }
 

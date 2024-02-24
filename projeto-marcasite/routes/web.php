@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CursoController;
 use App\Http\Controllers\InscritoController;
 use Illuminate\Support\Facades\Route;
 
@@ -27,9 +28,9 @@ Route::get('/Edit-inscritos',[InscritoController::class,'edit'])->name('inscrito
 Route::put('/Update-inscritos',[InscritoController::class,'update'])->name('inscrito.update');
 Route::delete('/Destroy-inscritos',[InscritoController::class,'destroy'])->name('inscrito.destroy');
 
-Route::get('/Index-cursos',[InscritoController::class,'index'])->name('curso.index');
-Route::get('/Create-cursos',[InscritoController::class,'create'])->name('curso.create');
-Route::get('/Store-cursos',[InscritoController::class,'store'])->name('curso.store');
-Route::get('/Edit-cursos',[InscritoController::class,'edit'])->name('curso.edit');
-Route::put('/Update-cursos',[InscritoController::class,'update'])->name('curso.update');
-Route::delete('/Destroy-cursos',[InscritoController::class,'destroy'])->name('curso.destroy');
+Route::get('/Index-cursos',[CursoController::class,'index'])->name('curso.index');
+Route::get('/Create-cursos',[CursoController::class,'create'])->name('curso.create');
+Route::get('/Store-cursos',[CursoController::class,'store'])->name('curso.store');
+Route::get('/Edit-cursos',[CursoController::class,'edit'])->name('curso.edit');
+Route::put('/Update-cursos',[CursoController::class,'update'])->name('curso.update');
+Route::delete('/Destroy-cursos',[CursoController::class,'destroy'])->name('curso.destroy');

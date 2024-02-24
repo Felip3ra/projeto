@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('nm_email');
             $table->string('nm_tipo_de_usuario');
             $table->string('pw_senha');
+            $table->timestamps();
         });
     }
 
