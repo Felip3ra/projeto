@@ -6,6 +6,15 @@
     <title>Document</title>
 </head>
 <body>
+
+    @if(session('success'))
+    <span style="color: #082;">
+
+
+        {{session('success')}}
+    </span>
+    @endif
+
     @forelse ($inscritos as $inscrito)
 
         NOME:{{$inscrito->nm_nome}}<br>
@@ -20,6 +29,12 @@
 
         <a href="{{route('inscrito.show',['inscrito' => $inscrito->id])}}">Visualizar</a>
         <a href="{{route('inscrito.edit',['inscrito' => $inscrito->id])}}">Editar</a><br>
+
+        <form action="{{route('inscrito.destroy',['inscrito' => $inscrito->id])}}" method="post">
+            @csrf
+            @method('delete')
+            <button type="submit">Apagar</button>
+        </form>
         <hr>
         <br>
     @empty

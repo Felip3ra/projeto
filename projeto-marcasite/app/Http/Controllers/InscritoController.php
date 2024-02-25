@@ -50,7 +50,9 @@ class InscritoController extends Controller
         return redirect()->route("inscrito.show",['inscrito' => $inscrito->id])->with("success","Conta editada com sucesso");
     }
     //excluir a conta do banco de dados
-    public function destroy(){
-        dd("Apagar");
+    public function destroy(Inscrito $inscrito){
+        $inscrito->delete();
+
+        return redirect()->route("inscrito.index")->with("success","Conta apagada com sucesso");
     }
 }

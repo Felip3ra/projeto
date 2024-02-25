@@ -26,7 +26,7 @@ Route::post('/Store-inscritos',[InscritoController::class,'store'])->name('inscr
 Route::get('/Show-inscritos/{inscrito}',[InscritoController::class,'show'])->name('inscrito.show');
 Route::get('/Edit-inscritos/{inscrito}',[InscritoController::class,'edit'])->name('inscrito.edit');
 Route::put('/Update-inscritos/{inscrito}',[InscritoController::class,'update'])->name('inscrito.update');
-Route::delete('/Destroy-inscritos',[InscritoController::class,'destroy'])->name('inscrito.destroy');
+Route::delete('/Destroy-inscritos/{inscrito}',[InscritoController::class,'destroy'])->name('inscrito.destroy');
 
 Route::get('/Index-cursos',[CursoController::class,'index'])->name('curso.index');
 Route::get('/Create-cursos',[CursoController::class,'create'])->name('curso.create');
