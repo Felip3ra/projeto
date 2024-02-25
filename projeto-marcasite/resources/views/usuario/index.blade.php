@@ -14,17 +14,12 @@
     </span>
     @endif
 
-    @forelse ($inscritos as $inscrito)
+    @forelse ($usuarios as $usuario)
 
-        NOME:{{$inscrito->nm_nome}}<br>
-        EMAIL:{{$inscrito->nm_email}}<br>
-        CPF:{{$inscrito->cd_cpf}}<br>
-        ENDEREÇO:{{$inscrito->nm_endereco}}<br>
-        EMPRESA:{{$inscrito->nm_empresa}}<br>
-        TELEFONE:{{$inscrito->tl_telefone}}<br>
-        CELULAR:{{$inscrito->tl_celular}}<br>
-        TIPO DE USUARIO:{{$inscrito->nm_tipo_de_usuario}}<br>
-        CURSO:{{$inscrito->nm_curso}}<br>
+        NOME:{{$usuario->nm_nome}}<br>
+        EMAIL:{{$usuario->nm_email}}<br>
+        TIPO DE USUARIO:{{$usuario->nm_tipo_de_usuario}}<br>
+        SENHA:{{$usuario->nm_curso}}<br>
 
         <a href="{{route('usuario.show',['usuario' => $usuario->id])}}">Visualizar</a>
         <a href="{{route('usuario.edit',['usuario' => $usuario->id])}}">Editar</a><br>

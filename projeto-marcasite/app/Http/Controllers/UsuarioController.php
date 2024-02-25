@@ -11,11 +11,11 @@ class UsuarioController extends Controller
     public function index(){
 
         $usuarios = Usuario::orderByDesc('created_at')->get();
-        return view("usuarios.index", ['usuarios' => $usuarios]);
+        return view("usuario.index", ['usuarios' => $usuarios]);
     }
     //carregar o formulario cadastrar usuario
     public function create(){
-        return view("usuarios.create");
+        return view("usuario.create");
     }
 
     public function show(Usuario $usuario){
