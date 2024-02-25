@@ -17,6 +17,15 @@
         {{session('success')}}
     </span>
     @endif
+        NOME:{{$inscrito->nm_nome}}<br>
+        EMAIL:{{$inscrito->nm_email}}<br>
+        CPF:{{$inscrito->cd_cpf}}<br>
+        ENDEREÇO:{{$inscrito->nm_endereco}}<br>
+        EMPRESA:{{$inscrito->nm_empresa}}<br>
+        TELEFONE:{{$inscrito->tl_telefone}}<br>
+        CELULAR:{{$inscrito->tl_celular}}<br>
+        TIPO DE USUARIO:{{$inscrito->nm_tipo_de_usuario}}<br>
+        CURSO:{{$inscrito->nm_curso}}<br>
 </body>
 
 </html>

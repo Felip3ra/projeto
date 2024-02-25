@@ -52,7 +52,7 @@
         <!-- <label for="confirma">Empresa</label>
         <input type="password" name="confirma" id="confirma"><br><br> -->
 
-        <button type="submit">Enviar</button>
+        <button type="submit">Salvar</button>
     </form>
     
 </body>

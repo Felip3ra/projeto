@@ -23,9 +23,9 @@ Route::get('/', function () {
 Route::get('/Index-inscritos',[InscritoController::class,'index'])->name('inscrito.index');
 Route::get('/Create-inscritos',[InscritoController::class,'create'])->name('inscrito.create');
 Route::post('/Store-inscritos',[InscritoController::class,'store'])->name('inscrito.store');
-Route::get('/Show-inscritos',[InscritoController::class,'show'])->name('inscrito.show');
-Route::get('/Edit-inscritos',[InscritoController::class,'edit'])->name('inscrito.edit');
-Route::put('/Update-inscritos',[InscritoController::class,'update'])->name('inscrito.update');
+Route::get('/Show-inscritos/{inscrito}',[InscritoController::class,'show'])->name('inscrito.show');
+Route::get('/Edit-inscritos/{inscrito}',[InscritoController::class,'edit'])->name('inscrito.edit');
+Route::put('/Update-inscritos/{inscrito}',[InscritoController::class,'update'])->name('inscrito.update');
 Route::delete('/Destroy-inscritos',[InscritoController::class,'destroy'])->name('inscrito.destroy');
 
 Route::get('/Index-cursos',[CursoController::class,'index'])->name('curso.index');
