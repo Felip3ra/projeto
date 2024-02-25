@@ -49,7 +49,7 @@
         </select><br><br>
 
         <label>senha</label>
-        <input type="password" name="pw_senha" id="pw_senha"><br><br>
+        <input type="password" name="pw_senha" id="pw_senha" value="{{old('pw_senha',$inscrito->pw_senha)}}"><br><br>
 
         <!-- <label for="confirma">Empresa</label>
         <input type="password" name="confirma" id="confirma"><br><br> -->

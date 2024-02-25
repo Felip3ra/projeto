@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CursoController;
 use App\Http\Controllers\InscritoController;
+use App\Http\Controllers\UsuarioController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -35,3 +36,11 @@ Route::get('/Show-cursos/{curso}',[CursoController::class,'show'])->name('curso.
 Route::get('/Edit-cursos/{curso}',[CursoController::class,'edit'])->name('curso.edit');
 Route::put('/Update-cursos/{curso}',[CursoController::class,'update'])->name('curso.update');
 Route::delete('/Destroy-cursos/{curso}',[CursoController::class,'destroy'])->name('curso.destroy');
+
+Route::get('/Index-usuarios',[UsuarioController::class,'index'])->name('usuario.index');
+Route::get('/Create-usuarios',[UsuarioController::class,'create'])->name('usuario.create');
+Route::post('/Store-usuarios',[UsuarioController::class,'store'])->name('usuario.store');
+Route::get('/Show-usuarios/{usuario}',[UsuarioController::class,'show'])->name('usuario.show');
+Route::get('/Edit-usuarios/{usuario}',[UsuarioController::class,'edit'])->name('usuario.edit');
+Route::put('/Update-usuarios/{usuario}',[UsuarioController::class,'update'])->name('usuario.update');
+Route::delete('/Destroy-usuarios/{usuario}',[UsuarioController::class,'destroy'])->name('usuario.destroy');
