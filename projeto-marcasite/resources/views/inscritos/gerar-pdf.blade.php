@@ -1,13 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../resources/css/index.css" />
-
-
     <style>
         .tabela {
             margin-left: 5%;
@@ -91,63 +87,93 @@
 
             width: 60px;
             margin-top: 20px;
+            margin-right: 60%;
             text-align: center;
         }
+
+        .button-arq {
+            background-color: orange;
+            color: #000000;
+            padding: 10px 15px;
+            border: 3px solid #000000;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100px;
+            text-align: center;
+            margin-left: 5px
+        }
+
+        /* Estilo básico para o select */
+        select {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            outline: none;
+            cursor: pointer;
+        }
+
+        /* Estilizando a seta do select */
+        select::-ms-expand {
+            display: none;
+        }
+
+        /* Adicionando estilo quando o select está focado */
+        select:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+        }
+
+        /* Estilizando as opções dentro do select */
+        select option {
+            background-color: #fff;
+            color: #333;
+        }
+
+        input[type="text"]
+        {
+            width: 50%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        
+        .filtro{
+            margin-left: 60%
+        }
     </style>
-
 </head>
-
-<body>
-    <h1>Listar cursos</h1>
-    @if(session('success'))
-    <span style="color: #082;">
-
-
-        {{session('success')}}
-    </span>
-    @endif
-
-
+<body style="font-size: 12px">
+    <h2 style="text-align: center">inscritos</h2>
     <div class="tabela">
+
+
 
         <table>
 
             <tr>
-                <th>Nome do Curso</th>
-                <th>Descricao</th>
-                <th>Valor</th>
-                <th>Dt. Inicio</th>
-                <th>Dt. Termino</th>
-                <th>Qtd. Maxima</th>
-                <th>Ações</th>
+                <th>Inscrito</th>
+                <th>Data de inscrição</th>
+                <th>Categoria</th>
+                <th>CPF</th>
+                <th>E-mail</th>
+                <th>Status</th>
+                <th>Total</th>
+                
             </tr>
 
-            @forelse ($cursos as $curso)
+            @forelse ($inscritos as $inscrito)
             <tr>
-                <td>{{$curso->nm_nome}}</td>
-                <td>{{$curso->ds_descricao}}</td>
-                <td>{{$curso->vl_valor}}</td>
-                <td>{{$curso->dt_data_de_inicio}}</td>
-                <td>{{$curso->dt_data_de_termino}}</td>
-                <td>{{$curso->qt_maximo_de_inscritos}}</td>
-                <td style="width: 300px">
-                    <ul class="acoes">
-                        <button class="visualizar">
-                            <a href="{{route('curso.show',['curso' => $curso->id])}}">Visualizar</a>
-                        </button>
-                        <button class="editar">
-                            <a href="{{route('curso.edit',['curso' => $curso->id])}}">Editar</a>
-                        </button>
-
-                        <form action="{{route('curso.destroy',['curso' => $curso->id])}}" method="post">
-                            @csrf
-                            @method('delete')
-                            <button type="submit" class="excluir"
-                                onclick="return confirm('Tem certeza que você deseja apagar esse registro?')">Apagar</button>
-                        </form>
-                    </ul>
-
-                </td>
+                <td>{{$inscrito->nm_nome}}</td>
+                <td>{{$inscrito->created_at}}</td>
+                <td>{{$inscrito->nm_tipo_de_usuario}}</td>
+                <td>{{$inscrito->cd_cpf}}</td>
+                <td>{{$inscrito->nm_email}}</td>
+                <td>Não pago</td>
+                <td>0</td>
+                
             </tr>
 
             @empty
@@ -159,22 +185,6 @@
             @endforelse
         </table>
 
-        <button type="reset" class="button-back">
-        <a href="{{route('welcome')}}">Voltar</a>
-        </button>
-
     </div>
-
-    @forelse ($cursos as $curso)
-    <form action="{{route('curso.destroy',['curso' => $curso->id])}}" method="post">
-        @csrf
-        @method('delete')
-    </form>
-    @empty
-    @endforelse
-    <hr>
-    <br>
-
 </body>
-
 </html>

@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('welcome');
 
 //Rotas a serem implementadas
 Route::get('/Index-inscritos',[InscritoController::class,'index'])->name('inscrito.index');
@@ -44,3 +44,6 @@ Route::get('/Show-usuarios/{usuario}',[UsuarioController::class,'show'])->name('
 Route::get('/Edit-usuarios/{usuario}',[UsuarioController::class,'edit'])->name('usuario.edit');
 Route::put('/Update-usuarios/{usuario}',[UsuarioController::class,'update'])->name('usuario.update');
 Route::delete('/Destroy-usuarios/{usuario}',[UsuarioController::class,'destroy'])->name('usuario.destroy');
+
+route::get('/gerar-pdf-inscrito',[InscritoController::class,'gerarPdf'])->name('inscritos.gerar-pdf');
+route::get('/gerar-csv-inscrito',[InscritoController::class,'gerarCsv'])->name('inscritos.gerar-csv');
