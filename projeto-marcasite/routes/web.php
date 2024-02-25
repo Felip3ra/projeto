@@ -31,6 +31,7 @@ Route::delete('/Destroy-inscritos/{inscrito}',[InscritoController::class,'destro
 Route::get('/Index-cursos',[CursoController::class,'index'])->name('curso.index');
 Route::get('/Create-cursos',[CursoController::class,'create'])->name('curso.create');
 Route::get('/Store-cursos',[CursoController::class,'store'])->name('curso.store');
-Route::get('/Edit-cursos',[CursoController::class,'edit'])->name('curso.edit');
-Route::put('/Update-cursos',[CursoController::class,'update'])->name('curso.update');
-Route::delete('/Destroy-cursos',[CursoController::class,'destroy'])->name('curso.destroy');
+Route::get('/Show-cursos/{curso}',[CursoController::class,'show'])->name('curso.show');
+Route::get('/Edit-cursos/{curso}',[CursoController::class,'edit'])->name('curso.edit');
+Route::put('/Update-cursos/{curso}',[CursoController::class,'update'])->name('curso.update');
+Route::delete('/Destroy-cursos/{curso}',[CursoController::class,'destroy'])->name('curso.destroy');

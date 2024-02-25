@@ -33,7 +33,7 @@
         <form action="{{route('inscrito.destroy',['inscrito' => $inscrito->id])}}" method="post">
             @csrf
             @method('delete')
-            <button type="submit">Apagar</button>
+            <button type="submit" onclick="return confirm('Tem certeza que você deseja apagar esse registro?')">Apagar</button>
         </form>
         <hr>
         <br>
