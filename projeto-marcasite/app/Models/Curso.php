@@ -18,6 +18,6 @@ class Curso extends Model
         'vl_valor',
         'dt_data_de_inicio',
         'dt_data_de_termino',
-        'qt_maximo',
+        'qt_maximo_de_inscritos',
     ];
 }

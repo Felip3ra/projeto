@@ -30,7 +30,7 @@ Route::delete('/Destroy-inscritos/{inscrito}',[InscritoController::class,'destro
 
 Route::get('/Index-cursos',[CursoController::class,'index'])->name('curso.index');
 Route::get('/Create-cursos',[CursoController::class,'create'])->name('curso.create');
-Route::get('/Store-cursos',[CursoController::class,'store'])->name('curso.store');
+Route::post('/Store-cursos',[CursoController::class,'store'])->name('curso.store');
 Route::get('/Show-cursos/{curso}',[CursoController::class,'show'])->name('curso.show');
 Route::get('/Edit-cursos/{curso}',[CursoController::class,'edit'])->name('curso.edit');
 Route::put('/Update-cursos/{curso}',[CursoController::class,'update'])->name('curso.update');
